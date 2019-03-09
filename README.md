@@ -1,5 +1,5 @@
 # terraform-k8s-nginx
-Build GCP infrastructure and k8s clusters with Terraform
+Build GCP infrastructure and k8s clusters with Terraform; Deploy autoscaling nginx server, and edit welcome page. 
 
 Firstly, we shall download and install Terraform:
 
@@ -17,7 +17,7 @@ chmod +x *
 
 cd ..
 
-Then, we would need to create a service account and key:
+Then, we need to create a service account and key:
 
 gcloud iam service-accounts create service
 
@@ -33,7 +33,7 @@ export GOOGLE_PROJECT=terraform-k8s-nginx
 
 export GOOGLE_REGION=europe-west1
 
-vim tunity-development.tf and copy the contents of the file, save and exit
+vim tunity-development.tf and copy the contents of the file, save and exit.
 
 execute "terraform init" in order to download and update necessary plugins.
 
@@ -41,13 +41,13 @@ execute "terraform plan" to make sure everything is ready to apply.
 
 execute "teraform apply" and begin with creating the infrastructure and clusters.
 
-after creating is completed, we would like to begin with creating our nginx deployments.
+after processes are completed, we would like to begin with creating our nginx deployments.
 
 vim "nginx.sh" copy the contents of "nginx.sh" into the file
 
 execute "./nginx.sh"
 
-after the successful script execution and deployment and exposure of the service is done, we would like to edit the "index.html" file so when we access the external ip address it would display "Hello Tunity!":
+after the successful script execution and deployment and exposure of the service is done, we would like to edit the "index.html" file so when we access the external ip address it would display ourown text message:
 
 edit the pods in deployment to display "Hello Tunity!":
 
