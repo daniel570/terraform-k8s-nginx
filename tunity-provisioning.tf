@@ -28,9 +28,6 @@ resource "google_container_cluster" "tunity_development_cluster" {
 
 add local-exec provisioner for running scripts:
 
-provisioner "local-exec" {
-    command = "echo ${aws_instance.web.private_ip} >> private_ips.txt"
-  }
 
 terraform init
 terraform plan
