@@ -6,10 +6,15 @@ Firstly, we shall download and install Terraform:
 wget https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
 
 mkdir terraform
+
 cd teraform
+
 unzip ../https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
+
 export PATH=$PATH:~/terraform
+
 chmod +x *
+
 cd ..
 
 Then, we would need to create a service account and key:
@@ -28,9 +33,12 @@ export GOOGLE_PROJECT=terraform-k8s-nginx
 
 export GOOGLE_REGION=europe-west1
 
-* vim tunity-development.tf and copy the contents of the file, save and exit
+vim tunity-development.tf and copy the contents of the file, save and exit
+
 execute "terraform init" in order to download and update necessary plugins.
-execute "terraform plan" to make sure everything is ready to apply
+
+execute "terraform plan" to make sure everything is ready to apply.
+
 execute "teraform apply" and begin with creating the infrastructure and clusters.
 
 after creating is completed, we would like to begin with creating our nginx deployments.
