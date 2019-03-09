@@ -1,11 +1,11 @@
 # terraform-k8s-nginx
-Build GCP infrastructure and k8s clusters with Terraform; Deploy autoscaling nginx server, and edit welcome page. 
+# Build GCP infrastructure and k8s clusters with Terraform; Deploy autoscaling nginx server, and edit welcome page. 
 
 * All commands are executed on Google Cloud Shell environment.
 
 * Replace "terraform-k8s-nginx" with your [PROJECT_ID] in order for the deployment to be successful.
 
-Firstly, we shall download and install Terraform:
+# Firstly, we shall download and install Terraform:
 
 wget https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
 
@@ -21,7 +21,7 @@ chmod +x *
 
 cd ..
 
-Then, we need to create a service account and key:
+# Then, we need to create a service account and key:
 
 gcloud iam service-accounts create service
 
@@ -29,7 +29,7 @@ gcloud projects add-iam-policy-binding terraform-k8s-nginx --member "serviceAcco
 
 gcloud iam service-accounts keys create credentials.json --iam-account service@terraform-k8s-nginx.iam.gserviceaccount.com
 
-Then, exporting of the environmental variables:
+# Then, exporting of the environmental variables:
 
 export GOOGLE_CREDENTIALS=$(cat ~/credentials.json)
 
@@ -37,36 +37,39 @@ export GOOGLE_PROJECT=terraform-k8s-nginx
 
 export GOOGLE_REGION=europe-west1
 
-vim tunity-development.tf and copy the contents of the file, save and exit.
+vim tunity-development.tf
 
-execute "terraform init" in order to download and update necessary plugins.
+# copy the contents of the "tunity-development.tf" from this repository source into the file, save and exit.
 
-execute "terraform plan" to make sure everything is ready to apply.
+# Download and update necessary plugins.
+terraform init
 
-execute "teraform apply" and begin with creating the infrastructure and clusters.
+# Make sure everything is ready to apply.
+terraform plan
 
-after processes are completed, we would like to begin with creating our nginx deployments.
+# Begin with creating the infrastructure and clusters.
+teraform apply
 
-vim "nginx.sh" copy the contents of "nginx.sh" into the file
+# After processes are completed, we would like to begin with creating our nginx deployments.
 
-execute "./nginx.sh"
+vim nginx.sh 
 
-after the successful script execution and deployment and exposure of the service is done, we would like to edit the "index.html" file so when we access the external ip address it would display ourown text message:
+# Copy the contents of "nginx.sh" from this repository source into the file, save and exit.
 
-edit the pods in deployment to display "Hello Tunity!":
+./nginx.sh
+
+# After the successful script execution, deployment and exposure of the service is done, we would like to edit the "index.html" file so when we access the external ip address it would display our own text message.
 
 kubectl edit deployment nginx
 
-under "image: nginx" add:
+# Under "image: nginx" add:
 
 command:
-- -sh
-- -c
-- -echo "Hello Tunity!" > /usr/share/nginx/html/index.html && service nginx stop && nginx -g "daemon off;"
-- -rm /etc/nginx/conf.d/default.conf
-
-then, we would like to get the External-IP address of the service and browse to it:
+ -sh
+ -c
+ -echo "Hello Tunity!" > /usr/share/nginx/html/index.html && service nginx stop && nginx -g "daemon off;"
+ -rm /etc/nginx/conf.d/default.conf
 
 kubectl get service nginx
 
-note the external ip address, copy it to your browser and surf to it. you should see the "Hello Tunity!" greeting.
+# Note the external ip address, copy it to your browser and surf to it. you should see the "Hello Tunity!" greeting.
