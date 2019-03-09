@@ -73,6 +73,6 @@ command:
  
  -rm /etc/nginx/conf.d/default.conf
 
-kubectl get service nginx
-
 # Note the external ip address, copy it to your browser and surf to it. you should see the "Hello Tunity!" greeting.
+
+kubectl get service nginx
