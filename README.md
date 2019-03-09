@@ -23,7 +23,9 @@ gcloud iam service-accounts keys create credentials.json --iam-account service@t
 Then, exporting of the environmental variables:
 
 export GOOGLE_CREDENTIALS=$(cat ~/credentials.json)
+
 export GOOGLE_PROJECT=terraform-k8s-nginx
+
 export GOOGLE_REGION=europe-west1
 
 * vim tunity-development.tf and copy the contents of the file, save and exit
