@@ -5,7 +5,7 @@
 
 * Replace "terraform-k8s-nginx" with your [PROJECT_ID] in order for the deployment to be successful.
 
-# firstly, we shall download and install Terraform:
+# Firstly, we shall download and install Terraform:
 
 wget https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
 
@@ -39,7 +39,7 @@ export GOOGLE_REGION=europe-west1
 
 vim tunity-development.tf
 
-# copy the contents of the "tunity-development.tf" from this repository source into the file, save and exit.
+# Copy the contents of the "tunity-development.tf" from this repository source into the file, save and exit.
 
 # Download and update necessary plugins.
 terraform init
