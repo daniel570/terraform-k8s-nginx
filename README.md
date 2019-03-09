@@ -1,7 +1,7 @@
 # terraform-k8s-nginx
 Build GCP infrastructure and k8s clusters with Terraform; Deploy autoscaling nginx server, and edit welcome page. 
 
-* All commands are executed on Google Cloud Shell environment
+* All commands are executed on Google Cloud Shell environment.
 
 * Replace "terraform-k8s-nginx" with your [PROJECT_ID] in order for the deployment to be successful.
 
