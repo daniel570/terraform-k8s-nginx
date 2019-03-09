@@ -60,10 +60,10 @@ kubectl edit deployment nginx
 under "image: nginx" add:
 
 command:
-- sh
+- -sh
 - -c
-- echo "Hello Tunity!" > /usr/share/nginx/html/index.html && service nginx stop && nginx -g "daemon off;"
-- rm /etc/nginx/conf.d/default.conf
+- -echo "Hello Tunity!" > /usr/share/nginx/html/index.html && service nginx stop && nginx -g "daemon off;"
+- -rm /etc/nginx/conf.d/default.conf
 
 then, we would like to get the External-IP address of the service and browse to it:
 
