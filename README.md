@@ -5,7 +5,7 @@
 
 * Replace "terraform-k8s-nginx" with your [PROJECT_ID] in order for the deployment to be successful.
 
-# Firstly, we shall download and install Terraform:
+# firstly, we shall download and install Terraform:
 
 wget https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
 
@@ -66,8 +66,11 @@ kubectl edit deployment nginx
 
 command:
  -sh
+ 
  -c
+ 
  -echo "Hello Tunity!" > /usr/share/nginx/html/index.html && service nginx stop && nginx -g "daemon off;"
+ 
  -rm /etc/nginx/conf.d/default.conf
 
 kubectl get service nginx
