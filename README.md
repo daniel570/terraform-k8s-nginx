@@ -46,6 +46,7 @@ edit the pods in deployment to display "Hello Tunity!":
 kubectl edit deployment nginx
 
 under "image: nginx" add:
+
 command:
 - sh
 - -c
