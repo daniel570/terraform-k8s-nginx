@@ -26,8 +26,6 @@ resource "google_container_cluster" "tunity_development_cluster" {
   }
 }
 
-add local-exec provisioner for running scripts:
-
 
 terraform init
 terraform plan
