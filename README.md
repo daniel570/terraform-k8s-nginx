@@ -58,6 +58,8 @@ gcloud container clusters get-credentials tunity-development-cluster
 
 vim nginx.sh 
 
+chmod +x nginx.sh
+
 # Copy the contents of "nginx.sh" from this repository source into the file, save and exit.
 
 ./nginx.sh
