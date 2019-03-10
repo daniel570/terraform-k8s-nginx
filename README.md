@@ -29,7 +29,7 @@ gcloud projects add-iam-policy-binding terraform-k8s-nginx --member "serviceAcco
 
 gcloud iam service-accounts keys create credentials.json --iam-account service@terraform-k8s-nginx.iam.gserviceaccount.com
 
-# Then, exporting of the environmental variables:
+# Export the environmental variables:
 
 export GOOGLE_CREDENTIALS=$(cat ~/credentials.json)
 
