@@ -54,9 +54,9 @@ teraform apply
 
 vim nginx.sh 
 
-chmod +x nginx.sh
-
 # Copy the contents of "nginx.sh" from this repository source into the file, save and exit.
+
+chmod +x nginx.sh
 
 ./nginx.sh
 
