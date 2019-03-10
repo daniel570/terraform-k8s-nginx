@@ -1,5 +1,5 @@
 # terraform-k8s-nginx
-# Build GCP infrastructure and k8s cluster with Terraform; Deploy autoscaling nginx server, and edit the welcome page. 
+# Build GCP infrastructure and k8s cluster with Terraform; Deploy autoscaling nginx server, and edit the welcome page
 
 * All commands are executed on Google Cloud Shell environment.
 
@@ -44,7 +44,7 @@ vim tunity-provisioning.tf
 # Download and update Terraform necessary plugins
 terraform init
 
-# Make sure everything is ready to apply.
+# Make sure everything is ready to apply
 terraform plan
 
 # Begin with creating the infrastructure and clusters
