@@ -50,7 +50,7 @@ terraform plan
 # Begin with creating the infrastructure and clusters.
 teraform apply
 
-# After processes are completed, we would like to begin with creating our nginx deployments.
+# After processes are completed, we will begin with creating our nginx deployments.
 
 vim nginx.sh 
 
