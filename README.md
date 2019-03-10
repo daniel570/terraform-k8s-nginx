@@ -52,7 +52,7 @@ teraform apply
 
 * In case of an error, just run the command again, and it shall complete everything smoothly.
 
-# After processes are completed, we will begin with creating our nginx deployments.
+# After processes are completed, we will begin with creating our auto-scaling nginx deployment.
 
 vim nginx.sh 
 
