@@ -50,7 +50,7 @@ terraform plan
 # Begin with creating the infrastructure and clusters.
 teraform apply
 
-# Create kubeconfig entry for the cluster
+# Create kubeconfig entry for the cluster.
 
 gcloud container clusters get-credentials tunity-development-cluster
 
