@@ -13,7 +13,7 @@ mkdir terraform
 
 cd teraform
 
-unzip ../https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
+unzip ../terraform_0.11.11_linux_amd64.zip
 
 export PATH=$PATH:~/terraform
 
