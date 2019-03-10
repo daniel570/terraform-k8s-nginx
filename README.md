@@ -37,9 +37,9 @@ export GOOGLE_PROJECT=terraform-k8s-nginx
 
 export GOOGLE_REGION=europe-west1
 
-vim tunity-development.tf
-
 # Copy the contents of the "tunity-development.tf" from this repository source into the file, save and exit.
+
+vim tunity-development.tf
 
 # Download and update necessary plugins.
 terraform init
