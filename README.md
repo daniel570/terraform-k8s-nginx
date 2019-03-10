@@ -68,7 +68,7 @@ chmod +x nginx.sh
 
 kubectl edit deployment nginx
 
-# Under "image: nginx" add:
+# Under "image: nginx" add (without the ""):
 
 command:
 
