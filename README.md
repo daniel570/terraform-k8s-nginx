@@ -69,6 +69,7 @@ kubectl edit deployment nginx
 # Under "image: nginx" add:
 
 command:
+
  -sh
  
  -c
