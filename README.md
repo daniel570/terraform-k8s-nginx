@@ -1,5 +1,5 @@
 # terraform-k8s-nginx
-# Build GCP infrastructure and k8s clusters with Terraform; Deploy autoscaling nginx server, and edit welcome page. 
+# Build GCP infrastructure and k8s cluster with Terraform; Deploy autoscaling nginx server, and edit welcome page. 
 
 * All commands are executed on Google Cloud Shell environment.
 
