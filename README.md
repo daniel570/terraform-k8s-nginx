@@ -60,7 +60,7 @@ chmod +x nginx.sh
 
 ./nginx.sh
 
-# After the successful script execution, deployment and exposure of the service is done, we would like to edit the "index.html" file so when we access the external ip address it would display our own text message.
+# After the successful script execution, deployment and exposure of the service is done, we want to edit the "index.html" file so when we access the external ip address it would display our own text message.
 
 kubectl edit deployment nginx
 
