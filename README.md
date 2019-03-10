@@ -5,7 +5,7 @@
 
 * Replace "terraform-k8s-nginx" with your [PROJECT_ID] in order for the deployment to be successful.
 
-# Firstly, we shall download and install Terraform:
+# Download and install Terraform:
 
 wget https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
 
@@ -21,7 +21,7 @@ chmod +x *
 
 cd ..
 
-# Then, we need to create a service account and key:
+# Create a service account and key:
 
 gcloud iam service-accounts create service
 
@@ -37,32 +37,32 @@ export GOOGLE_PROJECT=terraform-k8s-nginx
 
 export GOOGLE_REGION=europe-west1
 
-# Copy the contents of the "tunity-provisioning.tf" from this repository source into the file, save and exit.
+# Copy the contents of the "tunity-provisioning.tf" from this repository source into the file, save and exit
 
 vim tunity-provisioning.tf
 
-# Download and update Terraform necessary plugins.
+# Download and update Terraform necessary plugins
 terraform init
 
 # Make sure everything is ready to apply.
 terraform plan
 
-# Begin with creating the infrastructure and clusters.
+# Begin with creating the infrastructure and clusters
 teraform apply
 
 * In case of an error, just run the command again, and it shall complete everything smoothly.
 
-# After processes are completed, we will begin with creating our auto-scaling nginx deployment.
+# After processes are completed, we will begin with creating our auto-scaling nginx deployment
 
 vim nginx.sh 
 
-# Copy the contents of "nginx.sh" from this repository source into the file, save and exit.
+# Copy the contents of "nginx.sh" from this repository source into the file, save and exit
 
 chmod +x nginx.sh
 
 ./nginx.sh
 
-# After the successful script execution, deployment and exposure of the service is done, we want to edit the "index.html" file so when we access the external ip address it would display our own text message.
+# After the successful script execution, deployment and exposure of the service is done, we want to edit the "index.html" file so when we access the external ip address it would display our own text message
 
 kubectl edit deployment nginx
 
@@ -78,6 +78,6 @@ command:
   
   "-" rm /etc/nginx/conf.d/default.conf
 
-# Note the external ip address, copy it to your browser and surf to it. you should see the "Hello Tunity!" greeting.
+# Note the external ip address, copy it to your browser and surf to it. you should see the "Hello Tunity!" greeting
 
 kubectl get service nginx
