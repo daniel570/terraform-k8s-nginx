@@ -72,13 +72,13 @@ kubectl edit deployment nginx
 
 command:
 
- -sh
+  - -sh
  
- -c
+  - c
  
- -echo "Hello Tunity!" > /usr/share/nginx/html/index.html && service nginx stop && nginx -g "daemon off;"
- 
- -rm /etc/nginx/conf.d/default.conf
+  - echo "Hello Tunity!" > /usr/share/nginx/html/index.html && service nginx stop && nginx -g "daemon off;"
+  
+  - rm /etc/nginx/conf.d/default.conf
 
 # Note the external ip address, copy it to your browser and surf to it. you should see the "Hello Tunity!" greeting.
 
