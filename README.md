@@ -39,7 +39,7 @@ export GOOGLE_REGION=europe-west1
 
 # Copy the contents of the "tunity-development.tf" from this repository source into the file, save and exit.
 
-vim tunity-development.tf
+vim tunity-provisioning.tf
 
 # Download and update necessary plugins.
 terraform init
