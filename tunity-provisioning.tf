@@ -1,5 +1,3 @@
-vim tunity-provisioning.tf
-
 resource "google_compute_network" "tunity_development" {
   name                    = "tunity-development"
   auto_create_subnetworks = "false"
@@ -25,8 +23,3 @@ resource "google_container_cluster" "tunity_development_cluster" {
     password = "tunitydevopsmaster"
   }
 }
-
-
-terraform init
-terraform plan
-terraform apply
