@@ -19,7 +19,7 @@ resource "google_container_cluster" "tunity_development_cluster" {
     machine_type     = "n1-standard-1"
   }
   master_auth {
-    username = "tunity"
-    password = "tunitydevopsmaster"
+    username = "xxxxx"
+    password = "xxxxx"
   }
 }
